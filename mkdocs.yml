@@ -1,0 +1,71 @@
+# Basics
+site_name: A brief Japanese tutorial
+repo_url: https://github.com/Ashitemaru/JA-Tutorial
+repo_name: JA-Tutorial
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.indexes
+  palette:
+    - primary: white
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      locale: zh
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+  - meta
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.progressbar
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+
+# Contents
+nav:
+  - 欢迎来到 JA Tutorial:
+    - index.md
