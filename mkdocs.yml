@@ -6,6 +6,8 @@ repo_name: JA-Tutorial
 theme:
   name: material
   language: zh
+  font:
+    text: Noto Serif SC
   features:
     - navigation.top
     - navigation.tabs
@@ -23,6 +25,7 @@ theme:
 
 plugins:
   - search
+  - mkdocs-ja-ruby
   - git-revision-date-localized:
       fallback_to_build_date: true
       locale: zh
@@ -67,5 +70,51 @@ markdown_extensions:
 
 # Contents
 nav:
-  - 欢迎来到 JA Tutorial:
+  - 首页:
     - index.md
+  - 现代日语自学:
+    - modern/index.md
+    - 日语文字系统:
+      - 日语假名与五十音图: modern/chapter1/section1.md
+      - 日语三大文字体系的使用惯例: modern/chapter1/section2.md
+      - 日语汉字的训读和音读: modern/chapter1/section3.md
+      - 日语数量词的读法: modern/chapter1/section4.md
+      - 练习参考答案: modern/chapter1/answer.md
+    - 日语词汇构成与用言活用:
+      - 日语词语分类: modern/chapter2/section1.md
+      - 日语语句基本结构: modern/chapter2/section2.md
+      - 日语动词的活用: modern/chapter2/section3.md
+      - 日语形容词的活用: modern/chapter2/section4.md
+      - 日语形容动词的活用: modern/chapter2/section5.md
+      - 日语不规则助动词的活用: modern/chapter2/section6.md
+      - 练习参考答案: modern/chapter2/answer.md
+    - 无关助动词的用言活用用法:
+      - 连用修饰与连体修饰: modern/chapter3/section1.md
+      - 用言名词化: modern/chapter3/section2.md
+      - 复合词语的构成: modern/chapter3/section3.md
+      - 语句终止与语句中顿: modern/chapter3/section4.md
+    - 助动词接续与用法:
+      - modern/chapter4/index.md
+      - 否定助动词「ない」: modern/chapter4/section1.md
+      - 否定助动词「ず・ぬ・ん」: modern/chapter4/section2.md
+      - 过去时态助动词「た」: modern/chapter4/section3.md
+      - 尊敬语气助动词「ます」: modern/chapter4/section4.md
+      - 尊敬语气判断助动词「です」: modern/chapter4/section5.md
+      - 判断助动词「だ」: modern/chapter4/section6.md
+      - 推量、意志助动词「う・よう」: modern/chapter4/section7.md
+      - 被动、可能、自发、尊敬助动词「れる・られる」: modern/chapter4/section8.md
+      - 使役助动词「せる・させる」: modern/chapter4/section9.md
+      - 愿望助动词「たい、たがる」: modern/chapter4/section10.md
+      - 推量助动词「らしい」: modern/chapter4/section11.md
+      - 比况助动词「ようだ」: modern/chapter4/section12.md
+      - 传闻助动词「そうだ①」: modern/chapter4/section13.md
+      - 样态助动词「そうだ②」: modern/chapter4/section14.md
+      - 古语残留助动词「べし」: modern/chapter4/section15.md
+      - 古语残留助动词「まい」: modern/chapter4/section16.md
+      - 日语的语体: modern/chapter4/section17.md
+  - 古代日语自学:
+    - 历史假名遣: ancient/chapter1.md
+  - 汉文自学:
+    - kanbun/chapter1.md
+  - 现代日语中高级语法笔记:
+    - advanced/chapter1.md
