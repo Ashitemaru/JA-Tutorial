@@ -122,4 +122,8 @@ nav:
   - 汉文自学:
     - kanbun/chapter1.md
   - 现代日语中高级语法笔记:
-    - advanced/chapter1.md
+    - 绪论: advanced/chapter1.md
+    - 语态:
+      - advanced/chapter2/index.md
+      - 主动态: advanced/chapter2/section1.md
+      - 使役态: advanced/chapter2/section2.md
