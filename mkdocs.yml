@@ -97,7 +97,7 @@ nav:
       - modern/chapter4/index.md
       - 否定助动词「ない」: modern/chapter4/section1.md
       - 否定助动词「ず・ぬ・ん」: modern/chapter4/section2.md
-      - 过去时态助动词「た」: modern/chapter4/section3.md
+      - 过去、完了、存续助动词「た」: modern/chapter4/section3.md
       - 尊敬语气助动词「ます」: modern/chapter4/section4.md
       - 尊敬语气判断助动词「です」: modern/chapter4/section5.md
       - 判断助动词「だ」: modern/chapter4/section6.md
@@ -113,6 +113,7 @@ nav:
       - 古语残留助动词「まい」: modern/chapter4/section16.md
       - 日语的语体: modern/chapter4/section17.md
     - 助词接续与用法:
+      - modern/chapter5/index.md
       - 日语格助词用法: modern/chapter5/section1.md
       - 日语接续助词用法: modern/chapter5/section2.md
       - 日语副助词用法:
