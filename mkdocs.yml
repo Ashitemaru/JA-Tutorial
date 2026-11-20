@@ -5,6 +5,7 @@ repo_name: JA-Tutorial
 
 theme:
   name: material
+  variant: classic
   language: zh
   font:
     text: Noto Serif SC
@@ -26,15 +27,9 @@ theme:
 
 plugins:
   - search
-  - mkdocs-ja-ruby
-  - git-revision-date-localized:
-      fallback_to_build_date: true
-      locale: zh
-  - git-authors:
-      show_contribution: true
-      show_line_count: true
 
 markdown_extensions:
+  - ja_ruby
   - admonition
   - attr_list
   - def_list

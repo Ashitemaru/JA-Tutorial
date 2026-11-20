@@ -4,29 +4,46 @@ on:
     branches:
       - master
       - main
+  pull_request:
 permissions:
-  contents: write
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Configure Git Credentials
-        run: |
-          git config user.name Ashitemaru
-          git config user.email ashitemaru.holder@gmail.com
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v4
-        with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: .cache
-          restore-keys: |
-            mkdocs-material-
       - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+      - run: python scripts/git_dates.py docs
+      - run: zensical build --clean --strict
+        env:
+          PYTHONPATH: ext
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          user_name: Ashitemaru
+          user_email: ashitemaru.holder@gmail.com
