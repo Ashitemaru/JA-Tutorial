@@ -1,11 +1,6 @@
-click==8.5.1
-jinja2==3.1.6
-markdown==3.11.3
-markupsafe==3.0.4
-pathspec==1.1.1
-pygments==2.21.0
-pymdown-extensions==13.1.1
-pyyaml==6.0.3
-tomli==2.5.0
-zensical==0.1.2
-zensical-ui==0.0.42
+mkdocs==1.6.1
+mkdocs-material==9.8.2
+pymdown-extensions==13.1
+mkdocs-git-revision-date-localized-plugin==1.7.0
+mkdocs-git-authors-plugin==0.10.0
+mkdocs-ja-ruby==1.0.0
